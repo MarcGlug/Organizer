@@ -13,16 +13,11 @@
                 <h1>THE AMAZING ORGANIZER FROM THE PAST</h1>
             </div>
             <div class="bars">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+                <?php 
+                    for ($i=0; $i < 101 ; $i++) { 
+                        echo '<div class="bar" id="bar'.$i.'"></div>';
+                    }
+                ?>
             </div>
             <div class="footer">
                 <button id="randomize">Randomize</button>
