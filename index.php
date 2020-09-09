@@ -23,6 +23,7 @@
                 <button id="randomize">Randomize</button>
                 <button id="insertion">Insertion sort</button>
                 <button id="bubble">Bubble sort</button>
+                <button id="quick">Quick sort</button>
             </div>
         </div>
     </main>

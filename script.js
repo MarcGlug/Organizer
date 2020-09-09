@@ -11,10 +11,12 @@ insBtn.addEventListener("click", insertion );
 var bubbleBtn = document.getElementById("bubble");
 bubbleBtn.addEventListener("click", bubble );
 
+var quickBtn = document.getElementById("quick");
+quickBtn.addEventListener("click", quick );
+
 // --------------- ALGORIGHTMS -------------------
 
 async function insertion() {
-    console.log("insertion");
     for ( let i = 1; i < heights.length; i++){
         for ( let j = i; j > 0; j--){
             if( heights[j] < heights[j-1]){
@@ -29,7 +31,6 @@ async function insertion() {
 }
 
 async function bubble(){
-    console.log("bubble");
     for (let i = heights.length; i > 0; i--){
         for (let j = 0; j < i; j++){
             if(heights[j] > heights[j+1]){
@@ -39,6 +40,10 @@ async function bubble(){
             await visualization(1);
         }
     }
+}
+
+async function quick(){
+    alert("Not working yet");
 }
 
 // ------------------ OTHERS -----------------------
