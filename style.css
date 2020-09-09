@@ -2,6 +2,7 @@ html, body {
     margin: 0; 
     padding: 0;
     background-color: black;
+    font-family: 'Press Start 2P', cursive;
     color: #3cff19;
 }
 
@@ -17,8 +18,8 @@ h1 {
 }
 
 main {
-    height: 600px;
-    width: 1000px;
+    height: 750px;
+    width: 1100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,9 +46,22 @@ main {
 }
 
 .bar {
-    height: 1%;
+    height: 0%;
     width: 3px;
     background-color: #3cff19;
+}
+
+.btn {
+    position: relative;
+    top:50%;
+    transform: translate(0%,-50%);
+    border: 2px solid #3cff19;
+    padding:5px;
+    height: 40%; 
+}
+
+.btn:hover{
+    cursor: pointer;
 }
 
 .footer {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizer | The amazing thing that I don't know how to name it</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,10 +21,10 @@
                 ?>
             </div>
             <div class="footer">
-                <button id="randomize">Randomize</button>
-                <button id="insertion">Insertion sort</button>
-                <button id="bubble">Bubble sort</button>
-                <button id="quick">Quick sort</button>
+                <span class="btn" id="randomize">Randomize</span>
+                <span class="btn" id="insertion">Insertion sort</span>
+                <span class="btn" id="bubble">Bubble sort</span>
+                <span class="btn" id="quick">Quick sort</span>
             </div>
         </div>
     </main>
