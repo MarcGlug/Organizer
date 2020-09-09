@@ -1,23 +1,50 @@
 window.onload = function(){
 
-var randBtn = document.getElementById("randomize");
-randBtn.addEventListener("click", () => {randomize()} );
+var heights = [];
 
-var orgBtn = document.getElementById("organize");
-orgBtn.addEventListener("click", () => {organize()} );
+var randBtn = document.getElementById("randomize");
+randBtn.addEventListener("click", randomize);
+
+var orgBtn = document.getElementById("insertion");
+orgBtn.addEventListener("click", insertion );
 
 
 function randomize() {
-    for (let i = 0; i < 101; i++) {
-        let height = Math.floor(Math.random()*100);
-        let barId = "bar"+i;
-        let  bar = document.getElementById(barId);
-        bar.style.height = height+"%";        
+    heights = [];
+    for (let i = 0; i < 100; i++) {
+        let height = Math.ceil(Math.random()*100);
+        heights.push(height);
+              
+    }
+    draw(heights);
+    
+}
+
+async function insertion() {
+    for ( let i = 1; i < heights.length; i++){
+        for ( let j = i; j > 0; j--){
+            if( heights[j] < heights[j-1]){
+                [heights[j-1], heights[j]] = [heights[j], heights[j-1]];
+            }else{
+                break;
+            }
+            draw(heights);
+            await visualization(1);
+        }
     }
 }
 
-function organize() {
-    alert("Sorting isn't ready yet");
 }
 
+function draw(arr){
+    for (let i = 0; i < arr.length; i++) {
+        let barId = "bar"+i;
+        let h = arr[i];
+        let  bar = document.getElementById(barId);
+        bar.style.height = h+"%";
+    }
+}
+
+function visualization(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
 }

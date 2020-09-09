@@ -14,14 +14,14 @@
             </div>
             <div class="bars">
                 <?php 
-                    for ($i=0; $i < 101 ; $i++) { 
+                    for ($i=0; $i < 100 ; $i++) { 
                         echo '<div class="bar" id="bar'.$i.'"></div>';
                     }
                 ?>
             </div>
             <div class="footer">
                 <button id="randomize">Randomize</button>
-                <button id="organize">Organize</button>
+                <button id="insertion">Insertion sort</button>
             </div>
         </div>
     </main>
