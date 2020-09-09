@@ -22,6 +22,7 @@
             <div class="footer">
                 <button id="randomize">Randomize</button>
                 <button id="insertion">Insertion sort</button>
+                <button id="bubble">Bubble sort</button>
             </div>
         </div>
     </main>

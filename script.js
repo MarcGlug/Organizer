@@ -5,22 +5,16 @@ var heights = [];
 var randBtn = document.getElementById("randomize");
 randBtn.addEventListener("click", randomize);
 
-var orgBtn = document.getElementById("insertion");
-orgBtn.addEventListener("click", insertion );
+var insBtn = document.getElementById("insertion");
+insBtn.addEventListener("click", insertion );
 
+var bubbleBtn = document.getElementById("bubble");
+bubbleBtn.addEventListener("click", bubble );
 
-function randomize() {
-    heights = [];
-    for (let i = 0; i < 100; i++) {
-        let height = Math.ceil(Math.random()*100);
-        heights.push(height);
-              
-    }
-    draw(heights);
-    
-}
+// --------------- ALGORIGHTMS -------------------
 
 async function insertion() {
+    console.log("insertion");
     for ( let i = 1; i < heights.length; i++){
         for ( let j = i; j > 0; j--){
             if( heights[j] < heights[j-1]){
@@ -34,6 +28,30 @@ async function insertion() {
     }
 }
 
+async function bubble(){
+    console.log("bubble");
+    for (let i = heights.length; i > 0; i--){
+        for (let j = 0; j < i; j++){
+            if(heights[j] > heights[j+1]){
+                [heights[j], heights[j+1]] = [heights[j+1], heights[j]];
+            }
+            draw(heights);
+            await visualization(1);
+        }
+    }
+}
+
+// ------------------ OTHERS -----------------------
+
+function randomize() {
+    heights = [];
+    for (let i = 0; i < 100; i++) {
+        let height = Math.ceil(Math.random()*100);
+        heights.push(height);
+              
+    }
+    draw(heights);
+    
 }
 
 function draw(arr){
@@ -47,4 +65,9 @@ function draw(arr){
 
 function visualization(ms){
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+
 }
